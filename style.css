@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    
+    
+}
+.heading {
+    background-color: black;
+    color: aliceblue;
+    padding: 0 55px;
+}
+#trend-container{
+    padding: 0 55px;
+}
+.container{
+    background-image: linear-gradient( red, black);
+    padding: 0 55px;
+    display: flex;
+    align-items: center;
+    
+
+}
+#sidebar {
+    background-color: black;
+    width: 50px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 180px;
+        position: fixed;
+        top: 0;
+        
+        
+    }
+    
+    .left-menu-icon {
+        color: white;
+        font-size: 20px;
+        margin-bottom: 40px;
+}
+.container {
+    display: flex;
+    align-content: space-between;
+    max-width: 100vw;
+}
+.movie-list {
+    padding: 20px;
+}
+.like-area {
+    background-color: black;
+    color: white;
+    width: 135px;
+     /*height: 40px; */
+    border: 2px solid red;
+    padding: 15px;
+}
+.like-icon{
+    color: white;
+    font-size: 30px;
+}
+.movie-list-image {
+    width: 300px;
+}
