@@ -1,3 +1,51 @@
-*{
+* {
     margin: 0;
+
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: grey;
+    padding: 5% 20%;
+}
+
+.container h2 {
+    font-size: 1.56rem;
+}
+
+.form-label {
+    padding-top: 2rem;
+
+}
+
+.form-label label{
+    font-size: 1.2rem;
+}
+
+
+.form-label input {
+    width: 90%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+    background: transparent;
+    font-size: 17px;
+}
+
+.radio-area{
+    padding-top: 2.5rem;
+}
+
+.radio-area label{
+    font-size: 1.15rem;
+}
+
+button {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding: .6rem;
+    width: 100%;
+    border: 1px solid;
+    background-color: rgb(235, 170, 91);
+    font-size: 1.05rem;
 }
