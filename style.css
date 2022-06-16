@@ -140,12 +140,13 @@
     margin-top: 1.5rem;
     font-size: 1.1rem;
     border-radius: 10px;
+    margin-left: 1rem;
 }
 
 .footer button:hover{
     background-color: rgb(194, 169, 131);
     cursor: pointer;
-    font-size:.9rem ;
+    font-size:1rem ;
 }
 @media only screen and (max-width: 768px) {
     * {
@@ -222,7 +223,15 @@
     padding: 1rem 0 .5rem;
     font-size: .9rem;
 }
-.footer input {
-    
+.footer input{
+    width: 70%;
+}
+.footer-input button {
+    padding: .2rem .7rem;
+        font-size: 1.08rem;
+}
+.footer-input{
+    padding: 0 0.5rem ;
+    justify-content: space-between;
 }
 }
