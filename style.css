@@ -3,18 +3,15 @@
 }
 .heading {
     background-color: black;
-    /* color: aliceblue; */
     padding: 0 55px;
     display: flex;
     justify-content: space-between;
 
 }
 
-
-.togglebar {
-    margin: 1.4rem;
-
-}
+/* #trending{
+    margin:2% 20% ;
+} */
 
 #log-in{
     margin: 1.4rem 0.01rem;
@@ -41,14 +38,12 @@
     padding: 0 55px;
 }
 .container{
-    background-image: linear-gradient( red, black);
+    background-image: linear-gradient( red, rgb(100, 0, 0));
     padding: 0 55px;
     display: flex;
-    /* align-items: center; */
-    /* display: flex; */
     justify-content: space-between;
     flex-wrap: wrap;
-
+    
 }
 #sidebar {
     background-color: black;
@@ -86,19 +81,17 @@
     font-size: 1.19rem;
 }
 .like-area {
-    /* background-color: black; */
     color: white;
     width: 135px;
-     /*height: 40px; */
-    /* border: 2px solid red; */
     padding: 15px;
 }
-.like-icon{
+.likeicon{
     color: white;
     font-size: 25px;
+    cursor: pointer;
 }
 .movie-list-image {
-    width: 400px;
+    width: 100%;
     cursor: pointer;
     transition: all is ease-in-out;  /*I HAVE TO ATTEND TO THIS ASAP!!! */
     height: 16rem;
@@ -114,4 +107,76 @@
     border-radius: 10px;
     cursor: pointer;
     border-style: none;
+}
+
+@media only screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .heading {
+        padding: 0;
+        height: 7rem;
+        width: 100%;
+    }
+        #sidebar {
+            background-color: transparent;
+        }
+.web-title {
+    color: rgb(238, 69, 69);
+    padding: 20px 12px;
+    font-size: 1.72rem;
+    cursor: pointer;
+}
+#log-in {
+    margin: 1.4rem 0.01rem;
+    padding: 1rem 1.6rem;
+
+
+}
+
+#log-in button {
+    background-color: rgb(235, 179, 106);
+    padding: .5rem .5rem;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 9px;
+    font-size: .7rem;
+}
+.container {
+    padding: 0;
+    width: 100%;
+}
+.movie-list {
+    padding: 20px 22px;
+    width: 22rem;
+}
+
+
+.movie-list-title {
+    font-size: 1.0rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.movie-list-intro {
+    color: ghostwhite;
+    font-size: .9rem;
+}
+.movie-list-image {
+    width: 100%;
+}
+#trend-container {
+    padding: 0;
+    width: 100%;
+}
+.movie-list-button {
+    font-size: .8rem;
+    padding: .5rem .8rem;
+    margin-top: 1rem;
+}
+.likeicon {
+    font-size: 18px;
+}
 }
