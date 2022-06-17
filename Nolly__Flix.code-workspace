@@ -1,0 +1,24 @@
+{
+  "folders": [
+	{
+		"path": "..\\..\\..\\Desktop\\New Project"
+	},
+	{
+		"path": "..\\..\\..\\Desktop\\SCRIMBA"
+	},
+	{
+		"path": "..\\..\\..\\Desktop\\Nolly-Flix"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "NOLLY-FLIX-Repo"
+  },
+  "extensions": {
+    "recommendations": [
+      "gitduck.code-streaming"
+    ]
+  }
+}
