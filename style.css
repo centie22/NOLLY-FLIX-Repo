@@ -9,9 +9,9 @@
 
 }
 
-/* #trending{
-    margin:2% 20% ;
-} */
+#trending{
+    background-color: grey;
+}
 
 #log-in{
     margin: 1.4rem 0.01rem;
@@ -83,17 +83,16 @@
 .like-area {
     color: white;
     width: 135px;
-    padding: 15px;
+    padding: 25px;
 }
 .likeicon{
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     cursor: pointer;
 }
 .movie-list-image {
     width: 100%;
     cursor: pointer;
-    transition: all is ease-in-out;  /*I HAVE TO ATTEND TO THIS ASAP!!! */
     height: 16rem;
     object-fit: cover;
     border-radius: 11px;
@@ -216,7 +215,7 @@
     margin-top: 1rem;
 }
 .likeicon {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .footer {

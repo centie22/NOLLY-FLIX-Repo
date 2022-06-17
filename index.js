@@ -72,7 +72,7 @@ function updateMovie(el){
             <span class="like-area">
                 <span class="likes-number" data-id=${id}>${likes}</span>
                 <i class="like-icon fa-solid fa-thumbs-up likeicon" onclick=like(${id}) ></i>
-                <span id="price-tag">${price}</span>
+                
             </span>
         </div>`
     return elements
@@ -107,7 +107,7 @@ initMovie(movieData.movieList  )
     })
     movieData.movieList = currentData
     initMovie(currentData,true)
-    
+    initFavMovie(id, currentData)
     }
 
     const favBlock = document.getElementById('trending')
@@ -116,9 +116,7 @@ initMovie(movieData.movieList  )
     
     
     const updateFavMovie = (newEl) =>{
-    const el = `<div>
-    ${newEl.title} ${newEl.image} ${newEl.intro}
-    </div>`
+    const el = updateMovie(newEl)
     emptyDomFave.push(el)
     const joined = emptyDomFave.join("")
     favBlock.innerHTML = joined
@@ -127,36 +125,45 @@ initMovie(movieData.movieList  )
     const {moviecontainer, trending} = movieData
     
     const emptyDom = []
-    moviecontainer.forEach((e)=>{
-        const moviE = `<div class="movie-list">
-            <div><img class="movie-list-image" src=${image} alt="">
-            </div>
-            <span class="movie-list-title">${title}</span>
-            <p class="movie-list-intro">${intro}</p>
-            <button class="movie-list-button">Watch</button>
-            <span class="like-area">
-                <span class="likes-number" data-id=${id}>${likes}</span>
-                <i class="like-icon fa-solid fa-thumbs-up likeicon" onclick=like(${id}) ></i>
-                <span id="price-tag">${price}</span>
-            </span>
-        </div>`
-
-        emptyDom.push(moviE)
-    })
+    // moviecontainer= {
+    //     const moviE = `<div class="movie-list">
+    //         <div><img class="movie-list-image" src=${image} alt="">
+    //         </div>
+    //         <span class="movie-list-title">${title}</span>
+    //         <p class="movie-list-intro">${intro}</p>
+    //         <button class="movie-list-button">Watch</button>
+    //         <span class="like-area">
+    //             <span class="likes-number" data-id=${id}>${likes}</span>
+    //             <i class="like-icon fa-solid fa-thumbs-up likeicon" onclick=like(${id}) ></i>
+                
+    //         </span>
+    //     </div>`
+    //     emptyDom.push(moviE)
+    // }
 
 
 const joined = emptyDom.join("")
 
-    movies.innerHTML = joined
+    // movies.innerHTML = joined
 
-    const myFunction = (el) =>{
-        const currentId = el.dataset.id
-        console.log( typeof currentId )
-
+    const initFavMovie = (el, movieList) =>{
+        const currentMovie = movieList.find(i=>i.id ==+el)
+        updateFavMovie(currentMovie)
     }
     
 
 
+// const joined = emptyDom.join("")
 
+// productsBlock.innerHTML =joined
+
+// const myFunction = (el)=>{
+// 	//document.getElementsByTagName("html")[0].dataset.pbUserId
+// 	const currentId = el.dataset.item
+// 	console.log( typeof currentId)
+// const currentItem = 	products.find(i=> i.id ==+currentId)
+
+// 	 updateFavProducts(currentItem)
+// }
     
     
