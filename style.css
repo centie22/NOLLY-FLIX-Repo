@@ -64,6 +64,10 @@
         font-size: 20px;
         margin-bottom: 40px;
 }
+.liked{
+    pointer-events: none;
+    background-color: blue;
+}
 
 .movie-list {
     padding: 20px;

@@ -62,9 +62,10 @@ const movieData = {
 }
 let movieDom = []
 const movies = document.getElementById('moviecontainer')
-function updateMovie(el, hideLike=false){
+function updateMovie(el, hideLike=false, liked){
+    const classes = ["like-icon fa-solid fa-thumbs-up likeicon", liked? "liked" : ""].join(" ").trim()
+    console.log(classes)
     const {title, image, id,intro, likes, price}= el
-    console.log(hideLike)
     const elements = `<div class="movie-list">
             <div><img class="movie-list-image" src=${image} alt="">
             </div>
@@ -73,7 +74,7 @@ function updateMovie(el, hideLike=false){
             <button class="movie-list-button">Watch</button>
             ${hideLike? "" :`<span class="like-area">
                 <span class="likes-number" data-id=${id}>${likes}</span>
-                <i class="like-icon fa-solid fa-thumbs-up likeicon" onclick=like(${id}) ></i>
+                <i class= "like-icon fa-solid fa-thumbs-up likeicon" onclick=like(${id}) style= pointer-events:${liked? "none" : "auto"}></i>
                 
             </span> `}
             
@@ -87,7 +88,7 @@ const initMovie = (data, edit)=>{
             movieDom=[]
         }
     data.forEach((i)=>{
-        const movie = updateMovie(i)
+        const movie = updateMovie(i, false)
         
             movieDom.push(movie)
         
@@ -98,8 +99,11 @@ const initMovie = (data, edit)=>{
 initMovie(movieData.movieList  )
 
     function like(id){
+        console.log(movieData.favMovie)
+    if (movieData.favMovie.indexOf(id)==! -1){
+        return
+    }
         
-//         
     const currentData = movieData.movieList.map((movie)=>{
         
         const currentMovie = movie.id== id? movie.likes +1:movie.likes
@@ -110,9 +114,7 @@ initMovie(movieData.movieList  )
     })
     movieData.movieList = currentData
     initMovie(currentData,true)
-    if (movieData.favMovie.indexOf(id)==! -1){
-        return
-    }
+    
     movieData.favMovie.push(id)
     initFavMovie(id, currentData)
     }
